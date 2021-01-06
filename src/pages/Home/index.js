@@ -1,15 +1,15 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import Banner from '../../components/Banner';
-import CategoryList from '../../components/CategoryList';
-import './styles.css';
+import CategoryListContainer from '../../components/CategoryListContainer';
+import './styles.scss';
 
 const Home = () => {
     return (
         <div>
             <Navbar />
             <Banner />
-            <CategoryList />
+            <CategoryListContainer />
         </div>
     )
 };

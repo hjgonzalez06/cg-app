@@ -1,14 +1,18 @@
 import React from 'react';
-import './styles.css';
+import PropTypes from 'prop-types';
+import './styles.scss';
 
-const Timer = ({ product }) => {
-    const {offerTime} = product;
+const Timer = ({ expirationDate }) => {
     return (
         <div>
             <img src="https://placehold.co/20x20" alt="Timer" />
-            <h4>{offerTime}</h4>
+            <h4>{expirationDate}</h4>
         </div>
     );
+};
+
+Timer.propTypes = {
+    expirationDate: PropTypes.string
 };
 
 export default Timer;

@@ -1,17 +1,22 @@
 import React from 'react';
-import LinkNavbar from '../../LinkNavbar';
-import DropDownButton from '../../DropDownButton';
-import '../styles.css';
+import PropTypes from 'prop-types';
+import NavbarLink from '../../NavbarLink';
+import DropDown from '../../DropDown';
+import '../styles.scss';
 
-const LoggedOutLinks = ({ setLoggedIn }) => {
+const LoggedInLinks = ({ setLoggedIn }) => {
     return (
         <>
-            <LinkNavbar texto="Quiero vender" />
-            <DropDownButton texto="Usuario" onClick={() => setLoggedIn(false)} />
-            <LinkNavbar img="https://placehold.co/20x20" alt="Avisos" />
-            <LinkNavbar img="https://placehold.co/20x20" alt="Car" />
+            <NavbarLink text="Quiero vender" />
+            <DropDown text="Usuario" onClick={() => setLoggedIn(false)} />
+            <NavbarLink iconSrc="https://placehold.co/20x20" alt="Avisos" />
+            <NavbarLink iconSrc="https://placehold.co/20x20" alt="Car" />
         </>
     );
 };
 
-export default LoggedOutLinks;
+LoggedInLinks.propTypes = {
+    setLoggedIn: PropTypes.func
+};
+
+export default LoggedInLinks;

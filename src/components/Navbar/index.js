@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import LoggedOutLinks from './LinksGroup/LoggedOutLinks';
 import LoggedInLinks from './LinksGroup/LoggedInLinks';
-import './styles.css';
+import './styles.scss';
 
 const Navbar = () => {
     const [loggedIn, setLoggedIn] = useState(false);

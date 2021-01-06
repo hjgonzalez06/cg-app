@@ -1,15 +1,20 @@
 import React from 'react';
-import LinkNavbar from '../../LinkNavbar';
-import '../styles.css';
+import PropTypes from 'prop-types';
+import NavbarLink from '../../NavbarLink';
+import '../styles.scss';
 
 const LoggedOutLinks = ({ setLoggedIn }) => {
     return (
         <>
-            <LinkNavbar texto="Creá tu cuenta" />
-            <LinkNavbar texto="Ingresá" onClick={() => setLoggedIn(true)} />
-            <LinkNavbar img="https://placehold.co/20x20" alt="Car" />
+            <NavbarLink text="Creá tu cuenta" />
+            <NavbarLink text="Ingresá" onClick={() => setLoggedIn(true)} />
+            <NavbarLink iconSrc="https://placehold.co/20x20" alt="Car" />
         </>
     );
+};
+
+LoggedOutLinks.propTypes = {
+    setLoggedIn: PropTypes.func
 };
 
 export default LoggedOutLinks;
