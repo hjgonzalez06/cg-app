@@ -1,60 +1,62 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Timer from '../Timer';
-import GroupOccupancy from '../GroupOccupancy';
-import './styles.scss';
+import React from 'react'
+import PropTypes from 'prop-types'
+
+import Timer from '../Timer'
+import GroupOccupancy from '../GroupOccupancy'
+
+import './styles.scss'
 
 const ProductCard = ({
-    productPhotoUrl,
-    listPrice,
-    discountedPrice,
-    discountPercentage,
-    expirationDate,
-    description,
-    colors,
-    groupCapacity,
-    subscriptorsNumber,
-    occupancyPercentage,
-    extended
+  productPhotoUrl,
+  listPrice,
+  discountedPrice,
+  discountPercentage,
+  expirationDate,
+  description,
+  colors,
+  groupCapacity,
+  subscriptorsNumber,
+  occupancyPercentage,
+  extended
 }) => {
-    return (
+  return (
+    <div>
+      <img src={productPhotoUrl} alt="Imagen" />
+      <Timer remainingTime={expirationDate} />
+      <div>
+        <h4>Hasta un <span>{discountPercentage}%</span></h4>
+      </div>
+      <div>
         <div>
-            <img src={productPhotoUrl} alt="Imagen" />
-            <Timer remainingTime={expirationDate} />
-            <div>
-                <h4>Hasta un <span>{discountPercentage}%</span></h4>
-            </div>
-            <div>
-                <div>
-                    <h4><s>{listPrice}</s></h4>
-                    <h3>{discountedPrice}</h3>
-                </div>
-                <p>{description}</p>
-                <p>Colores: {colors}
-                </p>
-            </div>
-            <GroupOccupancy
-                groupCapacity={groupCapacity}
-                subscriptorsNumber={subscriptorsNumber}
-                occupancyPercentage={occupancyPercentage}
-            />
-            {extended && <button>Ver oferta</button>}
+            <h4><s>{listPrice}</s></h4>
+            <h3>{discountedPrice}</h3>
         </div>
-    );
-};
-
-ProductCard.propTypes = {
-    productPhotoUrl: PropTypes.string,
-    listPrice: PropTypes.string,
-    discountedPrice: PropTypes.string,
-    discountPercentage: PropTypes.number,
-    expirationDate: PropTypes.string,
-    description: PropTypes.string,
-    colors: PropTypes.string,
-    groupCapacity: PropTypes.number,
-    subscriptorsNumber: PropTypes.number,
-    occupancyPercentage: PropTypes.number,
-    extended: PropTypes.bool
+        <p>{description}</p>
+        <p>Colores: {colors}
+        </p>
+      </div>
+      <GroupOccupancy
+        groupCapacity={groupCapacity}
+        subscriptorsNumber={subscriptorsNumber}
+        occupancyPercentage={occupancyPercentage}
+      />
+      {extended && <button>Ver oferta</button>}
+    </div>
+  )
 }
 
-export default ProductCard;
+ProductCard.propTypes = {
+  productPhotoUrl: PropTypes.string,
+  listPrice: PropTypes.string,
+  discountedPrice: PropTypes.string,
+  discountPercentage: PropTypes.number,
+  expirationDate: PropTypes.string,
+  description: PropTypes.string,
+  colors: PropTypes.string,
+  groupCapacity: PropTypes.number,
+  subscriptorsNumber: PropTypes.number,
+  occupancyPercentage: PropTypes.number,
+  extended: PropTypes.bool
+}
+
+export default ProductCard
