@@ -21,7 +21,7 @@ const ProductCard = ({
 }) => {
   return (
     <div>
-      <img src={productPhotoUrl} alt="Imagen" />
+      <img src={productPhotoUrl} alt="Imagen del producto" />
       <Timer remainingTime={expirationDate} />
       <div>
         <h4>Hasta un <span>{discountPercentage}%</span></h4>
