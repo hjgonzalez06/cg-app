@@ -13,8 +13,7 @@ const CountdownTimer = ({ remainingTime }) => {
 }
 
 CountdownTimer.propTypes = {
-  /* remainingTime: PropTypes.string */
-  remainingTime: PropTypes.number
+  remainingTime: PropTypes.string
 }
 
 export default CountdownTimer

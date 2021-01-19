@@ -4,18 +4,23 @@ import dayjs from 'dayjs'
 
 import CountdownTimer from '../CountdownTimer'
 
+const duration = require('dayjs/plugin/duration')
+
 const CountdownTimerContainer = ({ expirationDate }) => {
   const calculateRemainingTime = () => {
-    const duration = require('dayjs/plugin/duration')
     dayjs.extend(duration)
 
     const difference = dayjs(expirationDate).diff(dayjs())
 
-    return dayjs.duration({
-      hours: dayjs(expirationDate).diff(dayjs(), 'hours'),
-      minutes: dayjs(difference).minute(),
-      seconds: dayjs(difference).second()
-    }).format('HH:mm:ss')
+    if (difference > 0) {
+      return dayjs.duration({
+        hours: dayjs(expirationDate).diff(dayjs(), 'hours'),
+        minutes: dayjs(difference).minute(),
+        seconds: dayjs(difference).second()
+      }).format('HH:mm:ss')
+    } else {
+      return ''
+    }
   }
 
   const [remainingTime, setRemainingTime] = useState(() => calculateRemainingTime())
@@ -30,7 +35,9 @@ const CountdownTimerContainer = ({ expirationDate }) => {
   }, [expirationDate])
 
   return (
-    <CountdownTimer remainingTime={remainingTime} />
+    <CountdownTimer remainingTime={
+      remainingTime.length ? remainingTime : 'EXPIRED'
+    } />
   )
 }
 
