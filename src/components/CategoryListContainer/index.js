@@ -1,20 +1,15 @@
 import React from 'react'
 
 import ProductListContainer from '../ProductListContainer'
+import useCategoryList from '../../hooks/useCategoryList'
 
 import './styles.scss'
 
-const fakeCategoryList = {
-  '¡Última chance!': ['1', '2', '3', '4'],
-  'Los más populares': ['1', '2', '3', '4'],
-  'Compra en dúo': ['1', '2', '3', '4'],
-  'Grupos pequeños': ['1', '2', '3', '4'],
-  'Grupos grandes': ['1', '2', '3', '4']
-}
-
 const CategoryListContainer = () => {
+  const categoryList = useCategoryList()
+
   return (
-    Object.entries(fakeCategoryList).map(([categoryTitle, productIds]) => {
+    Object.entries(categoryList).map(([categoryTitle, productIds]) => {
       const featuredProductId = productIds[0]
 
       return (
