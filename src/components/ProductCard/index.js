@@ -28,8 +28,8 @@ const ProductCard = ({
       </div>
       <div>
         <div>
-            <h4><s>{listPrice}</s></h4>
-            <h3>{discountedPrice}</h3>
+            <h4><s>${listPrice}</s></h4>
+            <h3>${discountedPrice}</h3>
         </div>
         <p>{description}</p>
         <p>Colores: {colors}
