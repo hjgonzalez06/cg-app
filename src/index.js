@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Home from './pages/Home'
+import App from './App.js'
 
 import './index.scss'
 
 ReactDOM.render(
-  <Home />,
+  <App />,
   document.getElementById('root')
 )
