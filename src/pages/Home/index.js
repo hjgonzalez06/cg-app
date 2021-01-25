@@ -8,11 +8,11 @@ import './styles.scss'
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <Banner />
       <CategoryListContainer />
-    </div>
+    </>
   )
 }
 
