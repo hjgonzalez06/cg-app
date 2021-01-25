@@ -6,7 +6,7 @@ import './styles.scss'
 const CountdownTimer = ({ remainingTime }) => {
   return (
     <div>
-      <img src="https://placehold.co/20x20" alt="Timer" />
+      <img src="https://placehold.co/20x20" alt='' />
       <h4>{remainingTime}</h4>
     </div>
   )

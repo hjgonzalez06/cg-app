@@ -6,7 +6,7 @@ import './styles.scss'
 const GroupOccupancy = ({ groupCapacity, subscriptorsNumber, occupancyPercentage }) => {
   return (
     <div>
-      <img src={`https://placehold.co/205x34?text=${subscriptorsNumber}`} alt="Figuras" />
+      <img src={`https://placehold.co/205x34?text=${subscriptorsNumber}`} alt='' />
       <h4>{occupancyPercentage}%</h4>
       <h4>{`${subscriptorsNumber}/${groupCapacity} agrupados`}</h4>
     </div>
