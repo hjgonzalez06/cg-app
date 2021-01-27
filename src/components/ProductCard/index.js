@@ -24,12 +24,12 @@ const ProductCard = ({
       <img src={productPhotoUrl} alt="Imagen del producto" />
       <CountdownTimerContainer expirationDate={expirationDate} />
       <div>
-        <h4>Hasta un <span>{discountPercentage}%</span></h4>
+        <h4>Hasta un <span>{discountPercentage}</span></h4>
       </div>
       <div>
         <div>
-            <h4><s>${listPrice}</s></h4>
-            <h3>${discountedPrice}</h3>
+            <h4><s>{listPrice}</s></h4>
+            <h3>{discountedPrice}</h3>
         </div>
         <p>{description}</p>
         <p>Colores: {colors}
@@ -49,13 +49,13 @@ ProductCard.propTypes = {
   productPhotoUrl: PropTypes.string,
   listPrice: PropTypes.string,
   discountedPrice: PropTypes.string,
-  discountPercentage: PropTypes.number,
+  discountPercentage: PropTypes.string,
   expirationDate: PropTypes.string,
   description: PropTypes.string,
   colors: PropTypes.string,
   groupCapacity: PropTypes.number,
   subscriptorsNumber: PropTypes.number,
-  occupancyPercentage: PropTypes.number,
+  occupancyPercentage: PropTypes.string,
   extended: PropTypes.bool
 }
 
