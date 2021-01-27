@@ -7,7 +7,9 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path='/' render={() => <Home /> } />
+        <Route exact path='/'>
+          <Home />
+        </Route>
       </Switch>
     </Router>
   )
