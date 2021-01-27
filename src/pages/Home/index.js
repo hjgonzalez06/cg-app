@@ -1,13 +1,19 @@
-import React from 'react';
-import './styles.css';
+import React from 'react'
+
+import Navbar from '../../components/Navbar'
+import Banner from '../../components/Banner'
+import CategoryListContainer from '../../components/CategoryListContainer'
+
+import './styles.scss'
 
 const Home = () => {
+  return (
+    <>
+      <Navbar />
+      <Banner />
+      <CategoryListContainer />
+    </>
+  )
+}
 
-    return (
-        <>
-            
-        </>
-    )
-};
-
-export default Home;
+export default Home

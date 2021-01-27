@@ -1,8 +1,22 @@
-import React from 'react';
-import './styles.css';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-const GroupOccupancy = () => {
-    
-};
+import './styles.scss'
 
-export default GroupOccupancy;
+const GroupOccupancy = ({ groupCapacity, subscriptorsNumber, occupancyPercentage }) => {
+  return (
+    <div>
+      <img src={`https://placehold.co/205x34?text=${subscriptorsNumber}`} alt='' />
+      <h4>{occupancyPercentage}</h4>
+      <h4>{`${subscriptorsNumber}/${groupCapacity} agrupados`}</h4>
+    </div>
+  )
+}
+
+GroupOccupancy.propTypes = {
+  groupCapacity: PropTypes.number,
+  subscriptorsNumber: PropTypes.number,
+  occupancyPercentage: PropTypes.string
+}
+
+export default GroupOccupancy
