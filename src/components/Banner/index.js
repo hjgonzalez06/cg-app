@@ -1,11 +1,12 @@
 import React from 'react'
 
-import classes from './styles.scss'
+import homepageBanner from '../../assets/Banner-homepage.png'
+import classes from './styles.module.scss'
 
 const Banner = () => {
   return (
     <div className={classes.banner}>
-      <img src="https://placehold.co/1440x380?text=Banner" alt='' />
+      <img className={classes.bannerImg} src={homepageBanner} alt='' role='presentation' />
     </div>
   )
 }
