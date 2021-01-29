@@ -1,16 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 import NavbarLink from '../../NavbarLink'
-
-import '../styles.scss'
 
 const LoggedOutLinks = ({ setLoggedIn }) => {
   return (
     <>
       <NavbarLink text="Creá tu cuenta" />
       <NavbarLink text="Ingresá" onClick={() => setLoggedIn(true)} />
-      <NavbarLink iconSrc="https://placehold.co/20x20" alt="Car" />
+      <NavbarLink iconSrc={faShoppingCart} isCart={true} />
     </>
   )
 }

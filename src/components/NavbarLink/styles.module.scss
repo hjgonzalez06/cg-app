@@ -1,0 +1,24 @@
+.link {
+  display: inline-block;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: normal;
+  text-align: center;
+}
+
+.icon {
+  >svg {
+    font-size: 20px;
+  }
+}
+
+.cartIcon {
+  >svg {
+    color: rgba($color: #EB5433, $alpha: 0.5);
+  }
+}

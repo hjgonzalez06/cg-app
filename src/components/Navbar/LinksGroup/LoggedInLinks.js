@@ -1,18 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { faBell } from '@fortawesome/free-regular-svg-icons'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 import NavbarLink from '../../NavbarLink'
 import DropDown from '../../DropDown'
-
-import '../styles.scss'
 
 const LoggedInLinks = ({ setLoggedIn }) => {
   return (
     <>
       <NavbarLink text="Quiero vender" />
       <DropDown text="Usuario" onClick={() => setLoggedIn(false)} />
-      <NavbarLink iconSrc="https://placehold.co/20x20" alt="Avisos" />
-      <NavbarLink iconSrc="https://placehold.co/20x20" alt="Car" />
+      <NavbarLink iconSrc={faBell} />
+      <NavbarLink iconSrc={faShoppingCart} isCart={true} />
     </>
   )
 }

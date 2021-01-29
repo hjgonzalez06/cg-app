@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './styles.scss'
+import classes from './styles.module.scss'
 
 const DropDown = ({ text, onClick }) => {
   return (
-      <button onClick={onClick}>
+      <button className={classes.dropdown} onClick={onClick}>
           {text}
       </button>
   )

@@ -1,13 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import classnames from 'classnames'
 
-import './styles.scss'
+import classes from './styles.module.scss'
 
-const NavbarLink = ({ text, iconSrc, onClick }) => {
+const NavbarLink = ({ text, iconSrc, isCart, onClick }) => {
+  const linkClasses = classnames(classes.link, {
+    [classes.icon]: iconSrc,
+    [classes.cartIcon]: isCart
+  })
+
   return (
-      <button onClick={onClick}>
+      <button className={linkClasses} onClick={onClick}>
           {text}
-          {iconSrc ? <img src={iconSrc} alt="Icono" /> : ''}
+          {iconSrc ? <FontAwesomeIcon icon={iconSrc} /> : null}
       </button>
   )
 }
@@ -15,6 +22,7 @@ const NavbarLink = ({ text, iconSrc, onClick }) => {
 NavbarLink.propTypes = {
   text: PropTypes.string,
   iconSrc: PropTypes.string,
+  isCart: PropTypes.bool,
   onClick: PropTypes.func
 }
 
