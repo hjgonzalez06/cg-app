@@ -1,0 +1,28 @@
+.countdownTimer {
+  width: 113px;
+  height: 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1px 16px;
+  color: #FDCA40;
+  background: #0A334F;
+  border-radius: 15px;
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  transform: translateY(35%);
+}
+
+.clockIcon {
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+.countdownText {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
