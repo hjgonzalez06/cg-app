@@ -4,13 +4,13 @@ import PropTypes from 'prop-types'
 import ProductCard from '../ProductCard'
 import useProductList from '../../hooks/useProductList'
 
-import './styles.scss'
+import classes from './styles.module.scss'
 
 const ProductListContainer = ({ productIds, featuredProductId }) => {
   const productList = useProductList()
 
   return (
-    <div>
+    <div className={classes.productList}>
       {productList.map(({
         id,
         productPhotoUrl,
