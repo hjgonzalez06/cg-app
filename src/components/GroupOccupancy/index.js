@@ -1,14 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './styles.scss'
+import classes from './styles.module.scss'
 
 const GroupOccupancy = ({ groupCapacity, subscriptorsNumber, occupancyPercentage }) => {
   return (
-    <div>
+    <div className={classes.groupOccupancy}>
       <img src={`https://placehold.co/205x34?text=${subscriptorsNumber}`} alt='' />
-      <h4>{occupancyPercentage}</h4>
-      <h4>{`${subscriptorsNumber}/${groupCapacity} agrupados`}</h4>
+      <div className={classes.occupancyInfo}>
+        <h4 className={classes.occupancyPercentage}>{occupancyPercentage}</h4>
+        <h4 className={classes.occupancyText}>{`${subscriptorsNumber}/${groupCapacity} agrupados`}</h4>
+      </div>
     </div>
   )
 }
