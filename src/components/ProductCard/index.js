@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import CountdownTimerContainer from '../CountdownTimerContainer'
 import GroupOccupancy from '../GroupOccupancy'
 
-import './styles.scss'
+import classes from './styles.module.scss'
 
 const ProductCard = ({
   productPhotoUrl,
@@ -20,19 +20,22 @@ const ProductCard = ({
   extended
 }) => {
   return (
-    <div>
-      <img src={productPhotoUrl} alt="Imagen del producto" />
-      <CountdownTimerContainer expirationDate={expirationDate} />
-      <div>
-        <h4>Hasta un <span>{discountPercentage}</span></h4>
-      </div>
-      <div>
-        <div>
-            <h4><s>{listPrice}</s></h4>
-            <h3>{discountedPrice}</h3>
+    <div className={classes.productCard}>
+      <div className={classes.imgContainer}>
+        <img className={classes.productImg} src={productPhotoUrl} alt='' />
+        <CountdownTimerContainer expirationDate={expirationDate} />
+        <div className={classes.discountBadge}>
+          <h4 className={classes.discountMessage}>Hasta un <span className={classes.discountPercentage}>{discountPercentage}</span>
+          </h4>
         </div>
-        <p>{description}</p>
-        <p>Colores: {colors}
+      </div>
+      <div className={classes.productInfo}>
+        <div className={classes.pricesSection}>
+            <h4 className={classes.listPrice}>{listPrice}</h4>
+            <h3 className={classes.discountedPrice}>{discountedPrice}</h3>
+        </div>
+        <p className={classes.productDescription}>{description}</p>
+        <p className={classes.productColors}>Colores: {colors}
         </p>
       </div>
       <GroupOccupancy
@@ -40,7 +43,7 @@ const ProductCard = ({
         subscriptorsNumber={subscriptorsNumber}
         occupancyPercentage={occupancyPercentage}
       />
-      {extended && <button>Ver oferta</button>}
+      {/* extended && <button className={classes.offerButton}>Ver oferta</button> */}
     </div>
   )
 }
