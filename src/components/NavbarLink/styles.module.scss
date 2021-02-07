@@ -12,13 +12,13 @@
 }
 
 .icon {
-  >svg {
+  & > i {
     font-size: 20px;
   }
 }
 
 .cartIcon {
-  >svg {
+  & > i {
     color: rgba($color: #EB5433, $alpha: 0.5);
   }
 }

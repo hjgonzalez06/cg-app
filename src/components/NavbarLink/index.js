@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classnames from 'classnames'
 
 import classes from './styles.module.scss'
@@ -14,7 +13,7 @@ const NavbarLink = ({ text, iconSrc, isCart, onClick }) => {
   return (
       <button className={linkClasses} onClick={onClick}>
           {text}
-          {iconSrc ? <FontAwesomeIcon icon={iconSrc} /> : null}
+          {iconSrc ? <i className={iconSrc} /> : null}
       </button>
   )
 }
