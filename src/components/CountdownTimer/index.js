@@ -6,8 +6,8 @@ import classes from './styles.module.scss'
 const CountdownTimer = ({ remainingTime }) => {
   return (
     <div className={classes.countdownTimer}>
-      <i className={`far fa-clock ${classes.clockIcon}`} />
-      <h4 className={classes.countdownText}>{remainingTime}</h4>
+      <i className={'far fa-clock'} />
+      <span>{remainingTime}</span>
     </div>
   )
 }
