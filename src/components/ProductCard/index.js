@@ -22,21 +22,20 @@ const ProductCard = ({
   return (
     <div className={classes.productCard}>
       <div className={classes.imgContainer}>
-        <img className={classes.productImg} src={productPhotoUrl} alt='' />
+        <img src={productPhotoUrl} alt='' />
         <CountdownTimerContainer expirationDate={expirationDate} />
         <div className={classes.discountBadge}>
-          <h4 className={classes.discountMessage}>Hasta un <span className={classes.discountPercentage}>{discountPercentage}</span>
+          <h4>Hasta un <span>{discountPercentage}</span>
           </h4>
         </div>
       </div>
       <div className={classes.productInfo}>
         <div className={classes.pricesSection}>
-            <h4 className={classes.listPrice}>{listPrice}</h4>
-            <h3 className={classes.discountedPrice}>{discountedPrice}</h3>
+          <h4>{listPrice}</h4>
+          <h3>{discountedPrice}</h3>
         </div>
-        <p className={classes.productDescription}>{description}</p>
-        <p className={classes.productColors}>Colores: {colors}
-        </p>
+        <p>{description}</p>
+        <p>Colores: {colors}</p>
       </div>
       <GroupOccupancy
         groupCapacity={groupCapacity}
