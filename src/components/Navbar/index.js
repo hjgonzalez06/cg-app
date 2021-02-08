@@ -10,8 +10,8 @@ const Navbar = () => {
 
   return (
     <nav className={classes.navbar}>
-      <div className={classes.brand}>
-        <span className={classes.logo} />
+      <div>
+        <span />
       </div>
       <div className={classes.navItems}>
         {!loggedIn
