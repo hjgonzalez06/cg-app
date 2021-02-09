@@ -1,13 +1,13 @@
-import Product1 from '../assets/product-imgs/Product1.svg'
-import Product2 from '../assets/product-imgs/Product2.svg'
-import Product3 from '../assets/product-imgs/Product3.svg'
-import Product4 from '../assets/product-imgs/Product4.svg'
+import deepWater from '../assets/product-imgs/deep-water.svg'
+import telephoneHeadphones from '../assets/product-imgs/telephone-headphones.svg'
+import boxedWater from '../assets/product-imgs/boxed-water.svg'
+import smirnoffIce from '../assets/product-imgs/smirnoff-ice.svg'
 
 const useProductList = () => {
   const fakeProductsList = [
     {
       id: '1',
-      productPhotoUrl: Product1,
+      productPhotoUrl: deepWater,
       listPrice: '$450',
       discountedPrice: '$350',
       discountPercentage: '20%',
@@ -20,7 +20,7 @@ const useProductList = () => {
     },
     {
       id: '2',
-      productPhotoUrl: Product2,
+      productPhotoUrl: telephoneHeadphones,
       listPrice: '$6.640',
       discountedPrice: '$3.950',
       discountPercentage: '20%',
@@ -33,7 +33,7 @@ const useProductList = () => {
     },
     {
       id: '3',
-      productPhotoUrl: Product3,
+      productPhotoUrl: boxedWater,
       listPrice: '$1.250',
       discountedPrice: '$875',
       discountPercentage: '20%',
@@ -46,7 +46,7 @@ const useProductList = () => {
     },
     {
       id: '4',
-      productPhotoUrl: Product4,
+      productPhotoUrl: smirnoffIce,
       listPrice: '$950',
       discountedPrice: '$670',
       discountPercentage: '20%',
