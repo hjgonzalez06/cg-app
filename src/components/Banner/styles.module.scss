@@ -1,8 +1,59 @@
-.banner {
+.bannerContainer {
   min-height: 380px;
-  height: 50vh;
+  height: 40vh;
+  position: relative;
+  background: #FFF;
+  margin: 0px auto 75px auto;
+  padding-top: 40px;
+  padding-left: 70px;
 
-  >.bannerImg {
+  & > img:nth-of-type(1) {
+    position: absolute;
+    top: 20px;
+    right: 345px;
+  }
+
+  & > img:nth-of-type(2) {
     width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  & > p:nth-of-type(1) {
+    font-size: 45px;
+    color: #3561D1;
+    margin: 40px auto;
+  }
+
+  & > p:nth-of-type(2) {
+    font-size: 24px;
+    color: #5C6163;
+    margin-top: 0;
+  }
+}
+
+.bannerInfo {
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  margin-right: 70px;
+
+  & > img {
+    margin-right: 20px;
+  }
+
+  & > p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #5C6163;
+  }
+
+  & > p:not(:last-of-type) {
+    margin: auto 40px auto auto;
+  }
+
+  & > p:last-of-type {
+    margin: auto;
   }
 }
