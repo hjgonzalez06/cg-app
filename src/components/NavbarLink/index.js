@@ -13,7 +13,7 @@ const NavbarLink = ({ text, iconSrc, isCart, onClick }) => {
   return (
       <button className={linkClasses} onClick={onClick}>
           {text}
-          {iconSrc ? <i className={iconSrc} /> : null}
+          {iconSrc && <i className={iconSrc} />}
       </button>
   )
 }

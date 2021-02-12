@@ -42,7 +42,6 @@ const ProductCard = ({
         subscriptorsNumber={subscriptorsNumber}
         occupancyPercentage={occupancyPercentage}
       />
-      {/* extended && <button className={classes.offerButton}>Ver oferta</button> */}
     </div>
   )
 }
