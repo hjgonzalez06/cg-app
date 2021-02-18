@@ -3,7 +3,7 @@ import React from 'react'
 import ProductListContainer from '../ProductListContainer'
 import useCategoryList from '../../hooks/useCategoryList'
 
-import './styles.scss'
+import classes from './styles.module.scss'
 
 const CategoryListContainer = () => {
   const categoryList = useCategoryList()
@@ -14,7 +14,7 @@ const CategoryListContainer = () => {
 
       return (
           <>
-              <h2>{categoryTitle}</h2>
+              <h2 className={classes.categoryTitle}>{categoryTitle}</h2>
               <ProductListContainer
                   productIds={productIds}
                   featuredProductId={featuredProductId}

@@ -1,0 +1,22 @@
+.countdownTimer {
+  display: flex;
+  padding: 1px 16px;
+  color: #FDCA40;
+  background: #0A334F;
+  border-radius: 15px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+
+  & > i {
+    font-size: 14px;
+    margin: auto 5px auto 0;
+  }
+  
+  & > span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    margin: auto 0 auto 5px;
+  }
+}

@@ -1,0 +1,21 @@
+.link {
+  display: inline-block;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.icon {
+  & > i {
+    font-size: 20px;
+  }
+}
+
+.cartIcon {
+  & > i {
+    color: rgba($color: #EB5433, $alpha: 0.5);
+  }
+}

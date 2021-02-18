@@ -1,0 +1,28 @@
+@import 'normalize.css';
+@import './DMSans.scss';
+@import './fontawesome/scss/fontawesome.scss';
+@import './fontawesome/scss/regular.scss';
+@import './fontawesome/scss/solid.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: #F7F8FA;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #3F98EB;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,10 +1,15 @@
+import deepWater from '../assets/product-imgs/deep-water.svg'
+import telephoneHeadphones from '../assets/product-imgs/telephone-headphones.svg'
+import boxedWater from '../assets/product-imgs/boxed-water.svg'
+import smirnoffIce from '../assets/product-imgs/smirnoff-ice.svg'
+
 const useProductList = () => {
   const fakeProductsList = [
     {
       id: '1',
-      productPhotoUrl: 'https://placehold.co/310x210?text=Imagen',
-      listPrice: '$250.000,00',
-      discountedPrice: '$200.000,00',
+      productPhotoUrl: deepWater,
+      listPrice: '$450',
+      discountedPrice: '$350',
       discountPercentage: '20%',
       expirationDate: '2021-02-08',
       description: 'Esta es un tarjeta de producto de prueba.',
@@ -15,9 +20,9 @@ const useProductList = () => {
     },
     {
       id: '2',
-      productPhotoUrl: 'https://placehold.co/310x210?text=Imagen',
-      listPrice: '$250.000,00',
-      discountedPrice: '$200.000,00',
+      productPhotoUrl: telephoneHeadphones,
+      listPrice: '$6.640',
+      discountedPrice: '$3.950',
       discountPercentage: '20%',
       expirationDate: '2021-02-15',
       description: 'Esta es un tarjeta de producto de prueba.',
@@ -28,9 +33,9 @@ const useProductList = () => {
     },
     {
       id: '3',
-      productPhotoUrl: 'https://placehold.co/310x210?text=Imagen',
-      listPrice: '$250.000,00',
-      discountedPrice: '$200.000,00',
+      productPhotoUrl: boxedWater,
+      listPrice: '$1.250',
+      discountedPrice: '$875',
       discountPercentage: '20%',
       expirationDate: '2021-02-11',
       description: 'Esta es un tarjeta de producto de prueba.',
@@ -41,9 +46,9 @@ const useProductList = () => {
     },
     {
       id: '4',
-      productPhotoUrl: 'https://placehold.co/310x210?text=Imagen',
-      listPrice: '$250.000,00',
-      discountedPrice: '$200.000,00',
+      productPhotoUrl: smirnoffIce,
+      listPrice: '$950',
+      discountedPrice: '$670',
       discountPercentage: '20%',
       expirationDate: '2021-02-09',
       description: 'Esta es un tarjeta de producto de prueba.',

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import CountdownTimerContainer from '../CountdownTimerContainer'
 import GroupOccupancy from '../GroupOccupancy'
 
-import './styles.scss'
+import classes from './styles.module.scss'
 
 const ProductCard = ({
   productPhotoUrl,
@@ -20,27 +20,28 @@ const ProductCard = ({
   extended
 }) => {
   return (
-    <div>
-      <img src={productPhotoUrl} alt="Imagen del producto" />
-      <CountdownTimerContainer expirationDate={expirationDate} />
-      <div>
-        <h4>Hasta un <span>{discountPercentage}</span></h4>
+    <div className={classes.productCard}>
+      <div className={classes.imgContainer}>
+        <img src={productPhotoUrl} alt='' />
+        <CountdownTimerContainer expirationDate={expirationDate} />
+        <div className={classes.discountBadge}>
+          <h4>Hasta un <span>{discountPercentage}</span>
+          </h4>
+        </div>
       </div>
-      <div>
-        <div>
-            <h4><s>{listPrice}</s></h4>
-            <h3>{discountedPrice}</h3>
+      <div className={classes.productInfo}>
+        <div className={classes.pricesSection}>
+          <h4>{listPrice}</h4>
+          <h3>{discountedPrice}</h3>
         </div>
         <p>{description}</p>
-        <p>Colores: {colors}
-        </p>
+        <p>Colores: {colors}</p>
       </div>
       <GroupOccupancy
         groupCapacity={groupCapacity}
         subscriptorsNumber={subscriptorsNumber}
         occupancyPercentage={occupancyPercentage}
       />
-      {extended && <button>Ver oferta</button>}
     </div>
   )
 }

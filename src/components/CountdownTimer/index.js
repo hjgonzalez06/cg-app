@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './styles.scss'
+import classes from './styles.module.scss'
 
 const CountdownTimer = ({ remainingTime }) => {
   return (
-    <div>
-      <img src="https://placehold.co/20x20" alt='' />
-      <h4>{remainingTime}</h4>
+    <div className={classes.countdownTimer}>
+      <i className={'far fa-clock'} />
+      <span>{remainingTime}</span>
     </div>
   )
 }
