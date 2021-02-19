@@ -16,7 +16,7 @@ const useProductList = () => {
       colors: ['azul', 'blanco', 'negro'],
       groupCapacity: 10,
       subscriptorsNumber: 8,
-      occupancyPercentage: '80%'
+      occupancyPercentage: 80
     },
     {
       id: '2',
@@ -29,7 +29,7 @@ const useProductList = () => {
       colors: ['azul', 'blanco', 'negro'],
       groupCapacity: 10,
       subscriptorsNumber: 8,
-      occupancyPercentage: '80%'
+      occupancyPercentage: 80
     },
     {
       id: '3',
@@ -42,7 +42,7 @@ const useProductList = () => {
       colors: ['azul', 'blanco', 'negro'],
       groupCapacity: 10,
       subscriptorsNumber: 8,
-      occupancyPercentage: '80%'
+      occupancyPercentage: 80
     },
     {
       id: '4',
@@ -55,7 +55,7 @@ const useProductList = () => {
       colors: ['azul', 'blanco', 'negro'],
       groupCapacity: 10,
       subscriptorsNumber: 8,
-      occupancyPercentage: '80%'
+      occupancyPercentage: 80
     }
   ]
 

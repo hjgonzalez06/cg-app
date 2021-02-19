@@ -11,8 +11,7 @@ const MAX_FIGURES = 10
 
 const Units = ({ groupCapacity, occupancyPercentage }) => {
   const amountOfPersonIcons = (groupCapacity < MAX_FIGURES) ? groupCapacity : MAX_FIGURES
-  const percentageNumber = parseInt(String(occupancyPercentage).replace('%', ''))
-  const amountFull = Math.floor(amountOfPersonIcons * (percentageNumber / 100))
+  const amountFull = Math.floor(amountOfPersonIcons * (occupancyPercentage / 100))
   const amountEmpty = amountOfPersonIcons - amountFull
 
   return (
@@ -25,7 +24,7 @@ const Units = ({ groupCapacity, occupancyPercentage }) => {
 
 Units.propTypes = {
   groupCapacity: PropTypes.number,
-  occupancyPercentage: PropTypes.string
+  occupancyPercentage: PropTypes.number
 }
 
 export default Units

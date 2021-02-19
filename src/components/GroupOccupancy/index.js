@@ -10,7 +10,7 @@ const GroupOccupancy = ({ groupCapacity, subscriptorsNumber, occupancyPercentage
     <div className={classes.groupOccupancy}>
       <Units groupCapacity={groupCapacity} occupancyPercentage={occupancyPercentage} />
       <div className={classes.occupancyInfo}>
-        <span>{occupancyPercentage}</span>
+        <span>{`${occupancyPercentage}%`}</span>
         <span>{`${subscriptorsNumber}/${groupCapacity} agrupados`}</span>
       </div>
     </div>
@@ -20,7 +20,7 @@ const GroupOccupancy = ({ groupCapacity, subscriptorsNumber, occupancyPercentage
 GroupOccupancy.propTypes = {
   groupCapacity: PropTypes.number,
   subscriptorsNumber: PropTypes.number,
-  occupancyPercentage: PropTypes.string
+  occupancyPercentage: PropTypes.number
 }
 
 export default GroupOccupancy
