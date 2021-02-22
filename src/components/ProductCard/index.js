@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 import CountdownTimerContainer from '../CountdownTimerContainer'
 import GroupOccupancy from '../GroupOccupancy'
+import priceTag from '../../assets/badge-icon/price-tag.svg'
 
 import classes from './styles.module.scss'
 
@@ -20,13 +22,14 @@ const ProductCard = ({
   extended
 }) => {
   return (
-    <div className={classes.productCard}>
+    <div className={classnames(classes.productCard, { [classes.extended]: extended })}>
       <div className={classes.imgContainer}>
         <img src={productPhotoUrl} alt='' />
-        <CountdownTimerContainer expirationDate={expirationDate} />
-        <div className={classes.discountBadge}>
-          <h4>Hasta un <span>{discountPercentage}</span>
-          </h4>
+        <CountdownTimerContainer expirationDate={expirationDate} extended={extended} />
+        <div className={classnames(classes.discountBadge, { [classes.extended]: extended })}>
+          {extended
+            ? <h4>Ahorrá hasta un <span><img src={priceTag} role="presentation" />{discountPercentage}</span></h4>
+            : <h4>Hasta un <span>{discountPercentage}</span></h4>}
         </div>
       </div>
       <div className={classes.productInfo}>
@@ -41,7 +44,9 @@ const ProductCard = ({
         groupCapacity={groupCapacity}
         subscriptorsNumber={subscriptorsNumber}
         occupancyPercentage={occupancyPercentage}
+        extended={extended}
       />
+      {extended && <button className={classes.offerButton}>Ver oferta</button>}
     </div>
   )
 }
@@ -56,7 +61,7 @@ ProductCard.propTypes = {
   colors: PropTypes.string,
   groupCapacity: PropTypes.number,
   subscriptorsNumber: PropTypes.number,
-  occupancyPercentage: PropTypes.string,
+  occupancyPercentage: PropTypes.number,
   extended: PropTypes.bool
 }
 

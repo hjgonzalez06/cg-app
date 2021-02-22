@@ -1,10 +1,25 @@
 const useCategoryList = () => {
   const fakeCategoryList = {
-    '¡Última chance!': ['1', '2', '3', '4'],
-    'Los más populares': ['1', '2', '3', '4'],
-    'Compra en dúo': ['1', '2', '3', '4'],
-    'Grupos pequeños': ['1', '2', '3', '4'],
-    'Grupos grandes': ['1', '2', '3', '4']
+    '¡Última chance!': {
+      productIds: ['1', '2', '3', '4'],
+      featuredProductId: ''
+    },
+    'Los más populares': {
+      productIds: ['1', '2', '3', '4'],
+      featuredProductId: ''
+    },
+    'Compra en dúo': {
+      productIds: ['1', '2', '3'],
+      featuredProductId: '1'
+    },
+    'Grupos pequeños': {
+      productIds: ['1', '2', '3'],
+      featuredProductId: '1'
+    },
+    'Grupos grandes': {
+      productIds: ['1', '2', '3'],
+      featuredProductId: '1'
+    }
   }
 
   return fakeCategoryList

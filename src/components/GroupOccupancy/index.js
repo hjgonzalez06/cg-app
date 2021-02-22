@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 import Units from './Units'
 
 import classes from './styles.module.scss'
 
-const GroupOccupancy = ({ groupCapacity, subscriptorsNumber, occupancyPercentage }) => {
+const GroupOccupancy = ({ groupCapacity, subscriptorsNumber, occupancyPercentage, extended }) => {
   return (
-    <div className={classes.groupOccupancy}>
+    <div className={classnames(classes.groupOccupancy, { [classes.extended]: extended })}>
       <Units groupCapacity={groupCapacity} occupancyPercentage={occupancyPercentage} />
       <div className={classes.occupancyInfo}>
         <span>{`${occupancyPercentage}%`}</span>
@@ -20,7 +21,8 @@ const GroupOccupancy = ({ groupCapacity, subscriptorsNumber, occupancyPercentage
 GroupOccupancy.propTypes = {
   groupCapacity: PropTypes.number,
   subscriptorsNumber: PropTypes.number,
-  occupancyPercentage: PropTypes.number
+  occupancyPercentage: PropTypes.number,
+  extended: PropTypes.bool
 }
 
 export default GroupOccupancy

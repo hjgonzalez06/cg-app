@@ -9,9 +9,13 @@ import classes from './styles.module.scss'
 const ProductListContainer = ({ productIds, featuredProductId }) => {
   const productList = useProductList()
 
+  const getProductsFilteredById = (productsIds) => {
+    return productList.filter((product) => productsIds.includes(product.id))
+  }
+
   return (
     <div className={classes.productList}>
-      {productList.map(({
+      {getProductsFilteredById(productIds).map(({
         id,
         productPhotoUrl,
         listPrice,

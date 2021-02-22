@@ -9,9 +9,7 @@ const CategoryListContainer = () => {
   const categoryList = useCategoryList()
 
   return (
-    Object.entries(categoryList).map(([categoryTitle, productIds]) => {
-      const featuredProductId = productIds[0]
-
+    Object.entries(categoryList).map(([categoryTitle, { productIds, featuredProductId }]) => {
       return (
           <>
               <h2 className={classes.categoryTitle}>{categoryTitle}</h2>
