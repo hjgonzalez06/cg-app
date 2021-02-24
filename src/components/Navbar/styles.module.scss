@@ -1,3 +1,5 @@
+@import '../../styles/media-queries.scss';
+
 .navbar {
   display: flex;
   width: 100%;
@@ -7,7 +9,14 @@
   box-shadow: 2px 4px 10px 4px rgba(14, 14, 44, 0.04);
   padding: 0 75px;
 
+  @include for-phone-only {
+    height: 50px;
+    min-height: 50px;
+    padding: 0 20px;
+  }
+
   & > div:nth-child(1) {
+    display: block;
     flex-grow: 4;
   
     & > span {
@@ -17,6 +26,20 @@
       background-color: #F6F7F8;
       margin: 21px 0;
     }
+
+    @include for-phone-only {
+      display: none;
+    }
+  }
+}
+
+.menuBars {
+  margin: 13px 0;
+  font-size: 24px;
+  opacity: 0;
+
+  @include for-phone-only {
+    opacity: 1;
   }
 }
 
@@ -30,5 +53,9 @@
 
   & > button:nth-child(4) {
     margin-left: 0;
+  }
+
+  @include for-phone-only {
+    display: none;
   }
 }

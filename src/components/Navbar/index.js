@@ -13,6 +13,7 @@ const Navbar = () => {
       <div>
         <span />
       </div>
+      <i className={`fas fa-bars ${classes.menuBars}`} />
       <div className={classes.navItems}>
         {!loggedIn
           ? <LoggedOutLinks setLoggedIn={setLoggedIn} />
